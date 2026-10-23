@@ -34,6 +34,7 @@ ML_hizli_ogren/
 ├── data/hazir/               ← egitim.csv (%80) + test.csv (%20)
 ├── docs/                     ← her aşamanın ders notu
 ├── src/                      ← birlikte yazdığımız Python kodları
+├── modeller/                 ← kaydedilen hazırlayıcı ve modeller
 └── gorseller/                ← grafikler
 ```
 
@@ -45,8 +46,8 @@ ML_hizli_ogren/
 | 1 | Veriyi al | ✅ | [docs/01_veri.md](docs/01_veri.md) | — |
 | 2 | Veriyi keşfet | ✅ | [docs/01_veri.md](docs/01_veri.md) | [src/00_gorselleri_ciz.py](src/00_gorselleri_ciz.py) |
 | 3 | Test setini ayır | ✅ | [docs/02_test_ayir.md](docs/02_test_ayir.md) | [src/01_test_setini_ayir.py](src/01_test_setini_ayir.py) |
-| 4 | Veriyi hazırla | 🟡 sıradaki | | |
-| 5 | Model eğit | ⬜ | | |
+| 4 | Veriyi hazırla | ✅ | [docs/03_hazirla.md](docs/03_hazirla.md) | [src/02_veriyi_hazirla.py](src/02_veriyi_hazirla.py), [src/hazirlik.py](src/hazirlik.py) |
+| 5 | Model eğit | 🟡 sıradaki | | |
 | 6 | İnce ayar | ⬜ | | |
 | 7 | Test et & sun | ⬜ | | |
 | 8 | Kaydet & kullan | ⬜ | | |
@@ -54,6 +55,8 @@ ML_hizli_ogren/
 ## Çalıştırma
 
 ```bash
-pip install pandas scikit-learn matplotlib
+pip install pandas scikit-learn matplotlib joblib
 python src/00_gorselleri_ciz.py
+python src/01_test_setini_ayir.py
+python src/02_veriyi_hazirla.py
 ```
