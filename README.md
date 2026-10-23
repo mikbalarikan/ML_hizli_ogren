@@ -1,0 +1,58 @@
+# ML Hızlı Öğren — Kaliforniya Ev Fiyatı Tahmini
+
+Sıfırdan, uygulamalı, adım adım makine öğrenmesi.
+Referans proje: [ageron/handson-ml3](https://github.com/ageron/handson-ml3) (14.4k ⭐, Apache-2.0).
+Kitaptaki **Bölüm 2: Uçtan Uca ML Projesi**'ni sadeleştirip birlikte yeniden yazıyoruz.
+
+![Proje haritası](gorseller/00_buyuk_harita.png)
+
+## Neden bu proje?
+
+| Kriter | Durum |
+|---|---|
+| Veri küçük mü? | ✅ 1 CSV, 1,4 MB, 20.640 satır |
+| Kod basit mi? | ✅ pandas + scikit-learn, ~150 satır |
+| Hızlı sonuç? | ✅ Eğitim CPU'da saniyeler-dakikalar |
+| Kaliteli mi? | ✅ ML eğitiminde en çok kullanılan "ilk gerçek proje" |
+
+## Problem tek cümlede
+
+> Kaliforniya'daki bir **mahallenin** (district) özelliklerine bakarak oradaki
+> **medyan ev fiyatını** tahmin et.
+
+- **Girdi (X, özellikler):** konum, ev yaşı, oda sayısı, nüfus, gelir, okyanusa yakınlık…
+- **Çıktı (y, hedef):** `median_house_value`
+- **Tür:** Denetimli öğrenme (supervised) → **Regresyon** (sayı tahmini)
+- **Başarı ölçüsü:** RMSE (ortalama ne kadar dolar yanılıyoruz?)
+
+## Klasör yapısı
+
+```
+ML_hizli_ogren/
+├── README.md                 ← bu dosya: harita + ilerleme
+├── data/housing/housing.csv  ← ham veri (dokunmuyoruz)
+├── docs/                     ← her aşamanın ders notu
+├── src/                      ← birlikte yazdığımız Python kodları
+└── gorseller/                ← grafikler
+```
+
+## İlerleme
+
+| # | Aşama | Durum | Ders notu | Kod |
+|---|---|---|---|---|
+| 0 | Büyük resim | ✅ | [docs/01_veri.md](docs/01_veri.md) | — |
+| 1 | Veriyi al | ✅ | [docs/01_veri.md](docs/01_veri.md) | — |
+| 2 | Veriyi keşfet | 🟡 sürüyor | [docs/01_veri.md](docs/01_veri.md) | [src/00_gorselleri_ciz.py](src/00_gorselleri_ciz.py) |
+| 3 | Test setini ayır | ⬜ | | |
+| 4 | Veriyi hazırla | ⬜ | | |
+| 5 | Model eğit | ⬜ | | |
+| 6 | İnce ayar | ⬜ | | |
+| 7 | Test et & sun | ⬜ | | |
+| 8 | Kaydet & kullan | ⬜ | | |
+
+## Çalıştırma
+
+```bash
+pip install pandas scikit-learn matplotlib
+python src/00_gorselleri_ciz.py
+```
