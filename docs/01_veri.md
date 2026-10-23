@@ -82,3 +82,14 @@ Kıyı (özellikle SF ve LA) kırmızı, yani pahalı. İç bölgeler mavi, yani
 - **Regresyon:** sayı tahmini (sınıflandırmanın tersi)
 - **Eksik değer (NaN):** boş hücre
 - **Kategorik özellik:** yazı ile ifade edilen sınırlı sayıda değer
+
+## Quiz 1 — cevaplar ve notlar
+
+| Soru | Özet doğru cevap |
+|---|---|
+| X ve y | X = özellikler (veri setinin hedef dışındaki sütunları), y = `median_house_value` |
+| Sınıflandırma mı? | Hayır. Çıktı sürekli bir sayı → **regresyon**. "Ucuz/pahalı" deseydik sınıflandırma olurdu. |
+| Eksik değer | Seçenekler: satırı sil / sütunu sil / **doldur (impute)**. Sadece %1 eksik var; medyanla dolduracağız, çünkü yeni gelen veride de boşluk olabilir. |
+| Yazı → sayı | Evet, ama `0,1,2,3,4` diye numaralandırmak yanlış sıralama ima eder. **One-hot encoding** kullanacağız (Aşama 4). |
+| Ölçek farkı | Doğru: min-max normalizasyon (0–1) ya da **standardizasyon** (ortalama 0, std 1). Ölçekleyici sadece eğitim verisiyle öğrenilir! |
+| Hepsiyle eğit, hepsiyle test et | Ezber (overfitting) ölçülemez. Test verisi ayrı tutulmalı. |
