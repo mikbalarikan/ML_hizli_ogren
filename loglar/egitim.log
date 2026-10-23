@@ -1,0 +1,36 @@
+[   0.1 sn] Veri hazır: 16512 satır × 16 sütun
+[   0.1 sn] === A) Eğitim verisinde RMSE (ezber notu) ===
+[   0.1 sn] Lineer Regresyon  RMSE =    67,311 $   (0.0 sn)
+[   0.3 sn] Karar Ağacı       RMSE =         0 $   (0.2 sn)
+[   4.0 sn] Random Forest     RMSE =    18,255 $   (3.7 sn)
+[   4.0 sn] === B) 5 katlı cross-validation (gerçek not) ===
+[   4.1 sn] Tur 1/5  Lineer Regresyon  RMSE =    67,988 $
+[   4.2 sn] Tur 1/5  Karar Ağacı       RMSE =    70,588 $
+[   7.1 sn] Tur 1/5  Random Forest     RMSE =    49,207 $
+[   7.2 sn] Tur 2/5  Lineer Regresyon  RMSE =    67,669 $
+[   7.3 sn] Tur 2/5  Karar Ağacı       RMSE =    71,893 $
+[  10.3 sn] Tur 2/5  Random Forest     RMSE =    48,985 $
+[  10.3 sn] Tur 3/5  Lineer Regresyon  RMSE =    68,953 $
+[  10.5 sn] Tur 3/5  Karar Ağacı       RMSE =    72,634 $
+[  13.8 sn] Tur 3/5  Random Forest     RMSE =    50,985 $
+[  13.8 sn] Tur 4/5  Lineer Regresyon  RMSE =    66,149 $
+[  14.1 sn] Tur 4/5  Karar Ağacı       RMSE =    70,573 $
+[  17.1 sn] Tur 4/5  Random Forest     RMSE =    49,974 $
+[  17.1 sn] Tur 5/5  Lineer Regresyon  RMSE =    67,684 $
+[  17.3 sn] Tur 5/5  Karar Ağacı       RMSE =    68,743 $
+[  20.1 sn] Tur 5/5  Random Forest     RMSE =    48,806 $
+[  20.1 sn] --- Özet ---
+[  20.1 sn] Lineer Regresyon  eğitim =    67,311 $  |  CV =    67,689 $ ± 901
+[  20.1 sn] Karar Ağacı       eğitim =         0 $  |  CV =    70,886 $ ± 1,330
+[  20.1 sn] Random Forest     eğitim =    18,255 $  |  CV =    49,591 $ ± 803
+[  20.3 sn] === C) Orman büyüyor (ağaç sayısı vs hata) ===
+[  21.1 sn]  20 ağaç -> torba dışı RMSE = 52,634 $
+[  21.7 sn]  30 ağaç -> torba dışı RMSE = 51,318 $
+[  22.6 sn]  50 ağaç -> torba dışı RMSE = 50,117 $
+[  23.8 sn]  75 ağaç -> torba dışı RMSE = 49,537 $
+[  25.1 sn] 100 ağaç -> torba dışı RMSE = 49,285 $
+[  27.4 sn] 150 ağaç -> torba dışı RMSE = 48,900 $
+[  29.8 sn] 200 ağaç -> torba dışı RMSE = 48,765 $
+[  34.6 sn] 300 ağaç -> torba dışı RMSE = 48,612 $
+[  34.9 sn] En önemli 5 özellik: median_income (0.46), ocean_proximity_INLAND (0.14), kisi_hane_basi (0.09), longitude (0.07), oda_kisi_basi (0.06)
+[  34.9 sn] BİTTİ ✅  -> modeller/sonuclar.json
