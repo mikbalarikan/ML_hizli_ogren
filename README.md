@@ -31,6 +31,7 @@ Kitaptaki **Bölüm 2: Uçtan Uca ML Projesi**'ni sadeleştirip birlikte yeniden
 ML_hizli_ogren/
 ├── README.md                 ← bu dosya: harita + ilerleme
 ├── data/housing/housing.csv  ← ham veri (dokunmuyoruz)
+├── data/hazir/               ← egitim.csv (%80) + test.csv (%20)
 ├── docs/                     ← her aşamanın ders notu
 ├── src/                      ← birlikte yazdığımız Python kodları
 └── gorseller/                ← grafikler
@@ -42,9 +43,9 @@ ML_hizli_ogren/
 |---|---|---|---|---|
 | 0 | Büyük resim | ✅ | [docs/01_veri.md](docs/01_veri.md) | — |
 | 1 | Veriyi al | ✅ | [docs/01_veri.md](docs/01_veri.md) | — |
-| 2 | Veriyi keşfet | 🟡 sürüyor | [docs/01_veri.md](docs/01_veri.md) | [src/00_gorselleri_ciz.py](src/00_gorselleri_ciz.py) |
-| 3 | Test setini ayır | ⬜ | | |
-| 4 | Veriyi hazırla | ⬜ | | |
+| 2 | Veriyi keşfet | ✅ | [docs/01_veri.md](docs/01_veri.md) | [src/00_gorselleri_ciz.py](src/00_gorselleri_ciz.py) |
+| 3 | Test setini ayır | ✅ | [docs/02_test_ayir.md](docs/02_test_ayir.md) | [src/01_test_setini_ayir.py](src/01_test_setini_ayir.py) |
+| 4 | Veriyi hazırla | 🟡 sıradaki | | |
 | 5 | Model eğit | ⬜ | | |
 | 6 | İnce ayar | ⬜ | | |
 | 7 | Test et & sun | ⬜ | | |
