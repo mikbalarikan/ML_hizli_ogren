@@ -1,0 +1,95 @@
+{
+  "en_iyi_ayar": {
+    "max_features": 8,
+    "min_samples_leaf": 1
+  },
+  "en_iyi_cv_rmse": 49140.21170278369,
+  "en_iyi_egitim_rmse": 17997.964404957285,
+  "toplam_sure_sn": 100,
+  "tum_kombinasyonlar": [
+    {
+      "max_features": 8,
+      "min_samples_leaf": 1,
+      "egitim_rmse": 18352.0,
+      "cv_rmse": 49140.0,
+      "sure_sn": 7.0
+    },
+    {
+      "max_features": 8,
+      "min_samples_leaf": 3,
+      "egitim_rmse": 28738.0,
+      "cv_rmse": 49303.0,
+      "sure_sn": 5.0
+    },
+    {
+      "max_features": 4,
+      "min_samples_leaf": 1,
+      "egitim_rmse": 18581.0,
+      "cv_rmse": 49471.0,
+      "sure_sn": 4.0
+    },
+    {
+      "max_features": 16,
+      "min_samples_leaf": 1,
+      "egitim_rmse": 18519.0,
+      "cv_rmse": 49591.0,
+      "sure_sn": 11.0
+    },
+    {
+      "max_features": 16,
+      "min_samples_leaf": 3,
+      "egitim_rmse": 27607.0,
+      "cv_rmse": 49645.0,
+      "sure_sn": 10.0
+    },
+    {
+      "max_features": 4,
+      "min_samples_leaf": 3,
+      "egitim_rmse": 30977.0,
+      "cv_rmse": 49849.0,
+      "sure_sn": 3.0
+    },
+    {
+      "max_features": 8,
+      "min_samples_leaf": 10,
+      "egitim_rmse": 41722.0,
+      "cv_rmse": 50932.0,
+      "sure_sn": 4.0
+    },
+    {
+      "max_features": 16,
+      "min_samples_leaf": 10,
+      "egitim_rmse": 40881.0,
+      "cv_rmse": 50947.0,
+      "sure_sn": 8.0
+    },
+    {
+      "max_features": 4,
+      "min_samples_leaf": 10,
+      "egitim_rmse": 43823.0,
+      "cv_rmse": 51990.0,
+      "sure_sn": 3.0
+    },
+    {
+      "max_features": 8,
+      "min_samples_leaf": 30,
+      "egitim_rmse": 50013.0,
+      "cv_rmse": 54046.0,
+      "sure_sn": 3.0
+    },
+    {
+      "max_features": 16,
+      "min_samples_leaf": 30,
+      "egitim_rmse": 49621.0,
+      "cv_rmse": 54094.0,
+      "sure_sn": 7.0
+    },
+    {
+      "max_features": 4,
+      "min_samples_leaf": 30,
+      "egitim_rmse": 51737.0,
+      "cv_rmse": 55368.0,
+      "sure_sn": 2.0
+    }
+  ]
+}

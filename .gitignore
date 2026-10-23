@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 *.tgz
 .ipynb_checkpoints/
+modeller/en_iyi_model.joblib

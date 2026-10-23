@@ -5,9 +5,12 @@ Diğer dosyalar buradan import eder:
 
 Altın kural: ogren() SADECE eğitim verisiyle çağrılır.
 donustur() ise eğitim, test ve yeni gelen her veriye aynı şekilde uygulanır.
+
+Hazirlayici sınıfı bu üç fonksiyonu tek bir sklearn kutusuna koyar (Aşama 6+).
 """
 import numpy as np
 import pandas as pd
+from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
@@ -50,3 +53,19 @@ def donustur(X, parcalar):
         columns=parcalar["sayisal_sutunlar"] + list(kodlayici.get_feature_names_out()),
         index=X.index,
     )
+
+
+class Hazirlayici(BaseEstimator, TransformerMixin):
+    """yeni_sutunlar_ekle + ogren + donustur'u tek kutuda toplar.
+
+    sklearn'ün fit/transform kalıbına uyduğu için Pipeline ve GridSearchCV içinde
+    kullanılabilir: cross-validation'ın her turunda fit() o turun eğitim parçasıyla
+    yeniden çağrılır, yani sızıntı olmaz.
+    """
+
+    def fit(self, X, y=None):
+        self.parcalar_ = ogren(yeni_sutunlar_ekle(X))
+        return self
+
+    def transform(self, X):
+        return donustur(yeni_sutunlar_ekle(X), self.parcalar_)

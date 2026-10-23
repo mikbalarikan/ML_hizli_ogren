@@ -1,0 +1,84 @@
+Başlıyor: 12 kombinasyon × 5 kat = 60 eğitim
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+[CV 1/5] END model__max_features=4, model__min_samples_leaf=1;, score=(train=-18538.346, test=-48471.733) total time=   4.4s
+[CV 4/5] END model__max_features=4, model__min_samples_leaf=1;, score=(train=-18645.836, test=-50126.436) total time=   4.8s
+[CV 2/5] END model__max_features=4, model__min_samples_leaf=1;, score=(train=-18640.135, test=-49384.538) total time=   4.8s
+[CV 3/5] END model__max_features=4, model__min_samples_leaf=1;, score=(train=-18399.449, test=-50387.137) total time=   4.8s
+[CV 1/5] END model__max_features=4, model__min_samples_leaf=3;, score=(train=-31044.259, test=-49082.202) total time=   3.0s
+[CV 3/5] END model__max_features=4, model__min_samples_leaf=3;, score=(train=-30601.815, test=-51028.115) total time=   2.9s
+[CV 2/5] END model__max_features=4, model__min_samples_leaf=3;, score=(train=-30971.295, test=-49861.375) total time=   3.1s
+[CV 5/5] END model__max_features=4, model__min_samples_leaf=1;, score=(train=-18681.040, test=-48983.338) total time=   4.4s
+[CV 1/5] END model__max_features=4, model__min_samples_leaf=10;, score=(train=-43889.651, test=-51206.923) total time=   2.8s
+[CV 4/5] END model__max_features=4, model__min_samples_leaf=3;, score=(train=-31198.195, test=-50106.659) total time=   3.5s
+[CV 5/5] END model__max_features=4, model__min_samples_leaf=3;, score=(train=-31067.945, test=-49165.928) total time=   3.5s
+[CV 2/5] END model__max_features=4, model__min_samples_leaf=10;, score=(train=-43908.259, test=-51793.027) total time=   2.7s
+[CV 3/5] END model__max_features=4, model__min_samples_leaf=10;, score=(train=-43386.854, test=-53315.106) total time=   2.8s
+[CV 4/5] END model__max_features=4, model__min_samples_leaf=10;, score=(train=-43974.158, test=-52215.653) total time=   2.6s
+[CV 1/5] END model__max_features=4, model__min_samples_leaf=30;, score=(train=-51967.975, test=-54456.436) total time=   2.5s
+[CV 5/5] END model__max_features=4, model__min_samples_leaf=10;, score=(train=-43954.148, test=-51417.807) total time=   2.9s
+[CV 2/5] END model__max_features=4, model__min_samples_leaf=30;, score=(train=-51892.674, test=-55273.010) total time=   2.5s
+[CV 3/5] END model__max_features=4, model__min_samples_leaf=30;, score=(train=-51166.861, test=-56843.326) total time=   2.2s
+[CV 4/5] END model__max_features=4, model__min_samples_leaf=30;, score=(train=-51741.132, test=-55567.228) total time=   2.1s
+[CV 5/5] END model__max_features=4, model__min_samples_leaf=30;, score=(train=-51914.129, test=-54698.016) total time=   2.3s
+[CV 1/5] END model__max_features=8, model__min_samples_leaf=1;, score=(train=-18299.153, test=-48146.603) total time=   6.2s
+[CV 3/5] END model__max_features=8, model__min_samples_leaf=1;, score=(train=-18276.338, test=-50608.898) total time=   6.3s
+[CV 2/5] END model__max_features=8, model__min_samples_leaf=1;, score=(train=-18315.154, test=-48938.310) total time=   7.0s
+[CV 4/5] END model__max_features=8, model__min_samples_leaf=1;, score=(train=-18400.159, test=-49341.897) total time=   7.2s
+[CV 1/5] END model__max_features=8, model__min_samples_leaf=3;, score=(train=-28763.059, test=-48518.821) total time=   5.3s
+[CV 2/5] END model__max_features=8, model__min_samples_leaf=3;, score=(train=-28672.791, test=-48801.834) total time=   5.3s
+[CV 5/5] END model__max_features=8, model__min_samples_leaf=1;, score=(train=-18467.540, test=-48665.351) total time=   6.8s
+[CV 3/5] END model__max_features=8, model__min_samples_leaf=3;, score=(train=-28482.738, test=-50809.918) total time=   5.4s
+[CV 4/5] END model__max_features=8, model__min_samples_leaf=3;, score=(train=-28902.415, test=-49646.385) total time=   4.8s
+[CV 2/5] END model__max_features=8, model__min_samples_leaf=10;, score=(train=-41731.198, test=-50413.766) total time=   4.2s
+[CV 1/5] END model__max_features=8, model__min_samples_leaf=10;, score=(train=-41634.962, test=-50013.865) total time=   4.2s
+[CV 5/5] END model__max_features=8, model__min_samples_leaf=3;, score=(train=-28869.797, test=-48738.736) total time=   5.4s
+[CV 3/5] END model__max_features=8, model__min_samples_leaf=10;, score=(train=-41383.793, test=-52711.758) total time=   3.9s
+[CV 1/5] END model__max_features=8, model__min_samples_leaf=30;, score=(train=-50023.694, test=-52929.301) total time=   3.5s
+[CV 4/5] END model__max_features=8, model__min_samples_leaf=10;, score=(train=-41986.468, test=-51252.392) total time=   4.1s
+[CV 5/5] END model__max_features=8, model__min_samples_leaf=10;, score=(train=-41872.382, test=-50268.567) total time=   4.2s
+[CV 2/5] END model__max_features=8, model__min_samples_leaf=30;, score=(train=-50107.440, test=-53827.410) total time=   3.5s
+[CV 4/5] END model__max_features=8, model__min_samples_leaf=30;, score=(train=-50318.317, test=-54205.117) total time=   3.3s
+[CV 3/5] END model__max_features=8, model__min_samples_leaf=30;, score=(train=-49479.842, test=-55982.152) total time=   3.5s
+[CV 5/5] END model__max_features=8, model__min_samples_leaf=30;, score=(train=-50136.158, test=-53287.289) total time=   3.7s
+[CV 1/5] END model__max_features=16, model__min_samples_leaf=1;, score=(train=-18566.559, test=-49207.070) total time=  11.1s
+[CV 2/5] END model__max_features=16, model__min_samples_leaf=1;, score=(train=-18431.372, test=-48984.920) total time=  10.7s
+[CV 3/5] END model__max_features=16, model__min_samples_leaf=1;, score=(train=-18344.766, test=-50984.860) total time=  11.2s
+[CV 4/5] END model__max_features=16, model__min_samples_leaf=1;, score=(train=-18653.005, test=-49973.807) total time=  11.1s
+[CV 1/5] END model__max_features=16, model__min_samples_leaf=3;, score=(train=-27735.916, test=-49174.187) total time=   9.3s
+[CV 2/5] END model__max_features=16, model__min_samples_leaf=3;, score=(train=-27491.014, test=-48684.364) total time=  10.1s
+[CV 3/5] END model__max_features=16, model__min_samples_leaf=3;, score=(train=-27235.534, test=-51103.958) total time=  10.2s
+[CV 5/5] END model__max_features=16, model__min_samples_leaf=1;, score=(train=-18601.582, test=-48805.668) total time=  12.0s
+[CV 1/5] END model__max_features=16, model__min_samples_leaf=10;, score=(train=-41166.513, test=-50520.426) total time=   8.6s
+[CV 4/5] END model__max_features=16, model__min_samples_leaf=3;, score=(train=-27755.460, test=-50188.915) total time=  10.5s
+[CV 5/5] END model__max_features=16, model__min_samples_leaf=3;, score=(train=-27815.000, test=-49075.902) total time=   9.5s
+[CV 2/5] END model__max_features=16, model__min_samples_leaf=10;, score=(train=-40660.654, test=-49920.889) total time=   8.5s
+[CV 1/5] END model__max_features=16, model__min_samples_leaf=30;, score=(train=-49972.403, test=-53568.319) total time=   6.4s
+[CV 3/5] END model__max_features=16, model__min_samples_leaf=10;, score=(train=-40297.966, test=-52599.261) total time=   7.7s
+[CV 4/5] END model__max_features=16, model__min_samples_leaf=10;, score=(train=-41224.812, test=-51361.650) total time=   7.7s
+[CV 5/5] END model__max_features=16, model__min_samples_leaf=10;, score=(train=-41054.506, test=-50333.986) total time=   7.7s
+[CV 2/5] END model__max_features=16, model__min_samples_leaf=30;, score=(train=-49381.554, test=-53041.466) total time=   6.7s
+[CV 4/5] END model__max_features=16, model__min_samples_leaf=30;, score=(train=-50132.263, test=-54373.115) total time=   6.4s
+[CV 3/5] END model__max_features=16, model__min_samples_leaf=30;, score=(train=-48854.550, test=-56078.033) total time=   6.9s
+[CV 5/5] END model__max_features=16, model__min_samples_leaf=30;, score=(train=-49765.735, test=-53410.186) total time=   6.7s
+
+BİTTİ: 100 sn (1.7 dk)
+
+Sıralama (en iyi üstte):
+  max_features  min_samples_leaf  egitim_rmse  cv_rmse  sure_sn
+            8                 1      18352.0  49140.0      7.0
+            8                 3      28738.0  49303.0      5.0
+            4                 1      18581.0  49471.0      4.0
+           16                 1      18519.0  49591.0     11.0
+           16                 3      27607.0  49645.0     10.0
+            4                 3      30977.0  49849.0      3.0
+            8                10      41722.0  50932.0      4.0
+           16                10      40881.0  50947.0      8.0
+            4                10      43823.0  51990.0      3.0
+            8                30      50013.0  54046.0      3.0
+           16                30      49621.0  54094.0      7.0
+            4                30      51737.0  55368.0      2.0
+
+EN İYİ AYAR: {'model__max_features': 8, 'model__min_samples_leaf': 1} -> CV RMSE = 49,140 $
+Kazananın eğitim RMSE'si: 17,998 $
+Kaydedildi -> modeller/en_iyi_model.joblib, modeller/ince_ayar_sonuclari.json
+EXIT 0

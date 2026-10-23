@@ -49,8 +49,8 @@ ML_hizli_ogren/
 | 3 | Test setini ayır | ✅ | [docs/02_test_ayir.md](docs/02_test_ayir.md) | [src/01_test_setini_ayir.py](src/01_test_setini_ayir.py) |
 | 4 | Veriyi hazırla | ✅ | [docs/03_hazirla.md](docs/03_hazirla.md) | [src/02_veriyi_hazirla.py](src/02_veriyi_hazirla.py), [src/hazirlik.py](src/hazirlik.py) |
 | 5 | Model eğit | ✅ | [docs/04_model_egit.md](docs/04_model_egit.md) | [src/03_model_egit.py](src/03_model_egit.py) |
-| 6 | İnce ayar | 🟡 sıradaki | | |
-| 7 | Test et & sun | ⬜ | | |
+| 6 | İnce ayar | ✅ | [docs/05_ince_ayar.md](docs/05_ince_ayar.md) | [src/04_ince_ayar.py](src/04_ince_ayar.py) |
+| 7 | Test et & sun | 🟡 sıradaki | | |
 | 8 | Kaydet & kullan | ⬜ | | |
 
 ## Çalıştırma
@@ -61,4 +61,5 @@ python src/00_gorselleri_ciz.py
 python src/01_test_setini_ayir.py
 python src/02_veriyi_hazirla.py
 python src/03_model_egit.py        # canlı izlemek için başka terminalde: tail -f loglar/egitim.log
+python -u src/04_ince_ayar.py | tee loglar/ince_ayar.log   # ~2 dk, modeller/en_iyi_model.joblib üretir
 ```
