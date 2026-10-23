@@ -1,0 +1,36 @@
+Test seti: 4128 mahalle (model bunların hiçbirini görmedi)
+
+TEST RMSE = 47,510 $
+TEST MAE  = 31,322 $   (ortalama mutlak hata: 'tipik bir mahallede kaç $ yanılıyoruz')
+%95 güven aralığı: 45,383 $ … 49,545 $
+
+Fiyat grubuna göre hata:
+              adet      rmse  ortalama_sapma
+fiyat_grubu                                
+<100k         709   32430.0         18210.0
+100-200k     1680   34090.0         14394.0
+200-300k      978   41926.0          -989.0
+300-400k      427   63335.0        -20888.0
+400-500k      145  103591.0        -73178.0
+500k tavan    189   92910.0        -61953.0
+
+Bölgeye göre hata:
+                  adet     rmse
+ocean_proximity               
+<1H OCEAN        1859  50592.0
+INLAND           1280  37796.0
+ISLAND              2  29365.0
+NEAR BAY          456  52683.0
+NEAR OCEAN        531  52499.0
+
+Tavan (500.001 $) mahalleleri hariç RMSE = 44,173 $ (189 mahalle çıkarıldı)
+
+En kötü 5 tahmin:
+     ocean_proximity  median_income    gercek    tahmin      hata
+425           INLAND           0.50  500001.0  141047.0 -358954.0
+1533       <1H OCEAN           1.99  500001.0  189890.0 -310111.0
+2191       <1H OCEAN           1.74  500001.0  215365.0 -284636.0
+3410       <1H OCEAN           1.27  500000.0  222619.0 -277381.0
+2044       <1H OCEAN           3.59  500001.0  223748.0 -276253.0
+
+Kaydedildi -> modeller/test_sonuclari.json

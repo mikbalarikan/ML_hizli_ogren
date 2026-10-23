@@ -1,0 +1,74 @@
+{
+  "test_rmse": 47509.63455188166,
+  "test_mae": 31322.11770348837,
+  "guven_araligi_95": [
+    45383.376125008035,
+    49544.72648024961
+  ],
+  "tavan_disi_rmse": 44173.230595416986,
+  "fiyat_grubuna_gore": [
+    {
+      "fiyat_grubu": "<100k",
+      "adet": 709,
+      "rmse": 32430.0,
+      "ortalama_sapma": 18210.0
+    },
+    {
+      "fiyat_grubu": "100-200k",
+      "adet": 1680,
+      "rmse": 34090.0,
+      "ortalama_sapma": 14394.0
+    },
+    {
+      "fiyat_grubu": "200-300k",
+      "adet": 978,
+      "rmse": 41926.0,
+      "ortalama_sapma": -989.0
+    },
+    {
+      "fiyat_grubu": "300-400k",
+      "adet": 427,
+      "rmse": 63335.0,
+      "ortalama_sapma": -20888.0
+    },
+    {
+      "fiyat_grubu": "400-500k",
+      "adet": 145,
+      "rmse": 103591.0,
+      "ortalama_sapma": -73178.0
+    },
+    {
+      "fiyat_grubu": "500k tavan",
+      "adet": 189,
+      "rmse": 92910.0,
+      "ortalama_sapma": -61953.0
+    }
+  ],
+  "bolgeye_gore": [
+    {
+      "ocean_proximity": "<1H OCEAN",
+      "adet": 1859,
+      "rmse": 50592.0
+    },
+    {
+      "ocean_proximity": "INLAND",
+      "adet": 1280,
+      "rmse": 37796.0
+    },
+    {
+      "ocean_proximity": "ISLAND",
+      "adet": 2,
+      "rmse": 29365.0
+    },
+    {
+      "ocean_proximity": "NEAR BAY",
+      "adet": 456,
+      "rmse": 52683.0
+    },
+    {
+      "ocean_proximity": "NEAR OCEAN",
+      "adet": 531,
+      "rmse": 52499.0
+    }
+  ]
+}

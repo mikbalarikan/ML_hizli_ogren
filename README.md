@@ -25,6 +25,15 @@ Kitaptaki **Bölüm 2: Uçtan Uca ML Projesi**'ni sadeleştirip birlikte yeniden
 - **Tür:** Denetimli öğrenme (supervised) → **Regresyon** (sayı tahmini)
 - **Başarı ölçüsü:** RMSE (ortalama ne kadar dolar yanılıyoruz?)
 
+## Sonuç (şu ana kadar)
+
+| | RMSE |
+|---|---|
+| Lineer Regresyon (CV) | 67.689 $ |
+| Karar Ağacı (CV) | 70.886 $ |
+| Random Forest, ince ayarlı (CV) | 49.140 $ |
+| **Random Forest, TEST SETİ** | **47.510 $** (%95 GA: 45.4k–49.5k) |
+
 ## Klasör yapısı
 
 ```
@@ -50,8 +59,8 @@ ML_hizli_ogren/
 | 4 | Veriyi hazırla | ✅ | [docs/03_hazirla.md](docs/03_hazirla.md) | [src/02_veriyi_hazirla.py](src/02_veriyi_hazirla.py), [src/hazirlik.py](src/hazirlik.py) |
 | 5 | Model eğit | ✅ | [docs/04_model_egit.md](docs/04_model_egit.md) | [src/03_model_egit.py](src/03_model_egit.py) |
 | 6 | İnce ayar | ✅ | [docs/05_ince_ayar.md](docs/05_ince_ayar.md) | [src/04_ince_ayar.py](src/04_ince_ayar.py) |
-| 7 | Test et & sun | 🟡 sıradaki | | |
-| 8 | Kaydet & kullan | ⬜ | | |
+| 7 | Test et & sun | ✅ | [docs/06_test_et.md](docs/06_test_et.md) | [src/05_test_et.py](src/05_test_et.py) |
+| 8 | Kaydet & kullan | 🟡 sıradaki | | |
 
 ## Çalıştırma
 
@@ -62,4 +71,5 @@ python src/01_test_setini_ayir.py
 python src/02_veriyi_hazirla.py
 python src/03_model_egit.py        # canlı izlemek için başka terminalde: tail -f loglar/egitim.log
 python -u src/04_ince_ayar.py | tee loglar/ince_ayar.log   # ~2 dk, modeller/en_iyi_model.joblib üretir
+python src/05_test_et.py           # final sınav: test RMSE + hata analizi
 ```
