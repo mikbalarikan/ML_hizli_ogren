@@ -60,5 +60,5 @@ pip install pandas scikit-learn matplotlib joblib
 python src/00_gorselleri_ciz.py
 python src/01_test_setini_ayir.py
 python src/02_veriyi_hazirla.py
-cd src && python 03_model_egit.py   # izlemek için: tail -f loglar/egitim.log
+python src/03_model_egit.py        # canlı izlemek için başka terminalde: tail -f loglar/egitim.log
 ```
