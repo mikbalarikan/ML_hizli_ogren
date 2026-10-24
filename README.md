@@ -38,6 +38,9 @@ Kitaptaki **Bölüm 2: Uçtan Uca ML Projesi**'ni sadeleştirip birlikte yeniden
 
 Projeyi ML'e yeni başlayanlara anlatan 11 sahnelik eğitim videosu ([Remotion](https://www.remotion.dev/) ile üretildi).
 
+[![Video kapağı](video/kapak.jpg)](video/ml_ozet.mp4)
+
+- **Video:** [video/ml_ozet.mp4](video/ml_ozet.mp4) (9:59, 1080p, 30 MB, altyazılı)
 - Zaman kodlu senaryo: [docs/08_video_senaryo.md](docs/08_video_senaryo.md)
 - Kaynak kod ve render talimatı: [video/](video/README.md)
 

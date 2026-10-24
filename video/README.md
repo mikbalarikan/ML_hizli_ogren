@@ -3,6 +3,7 @@
 Kaliforniya ev fiyatı projesini ML'e yeni başlayanlara anlatan, 11 sahnelik eğitim videosu.
 [Remotion](https://www.remotion.dev/) ile React bileşenlerinden render edilir.
 
+- **Hazır video:** [`ml_ozet.mp4`](ml_ozet.mp4) (9:59 · 1920×1080 · 30 fps · 30 MB)
 - **Senaryo (zaman kodlu):** [`../docs/08_video_senaryo.md`](../docs/08_video_senaryo.md)
 - **Tek kaynak:** [`src/senaryo.json`](src/senaryo.json). Altyazılar, sahne süreleri ve senaryo dokümanı bu dosyadan üretilir.
 
