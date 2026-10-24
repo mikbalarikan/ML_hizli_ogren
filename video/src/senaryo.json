@@ -1,0 +1,185 @@
+{
+  "baslik": "Makine Öğrenmesi: 10 Dakikada Uçtan Uca Bir Proje",
+  "altBaslik": "Kaliforniya ev fiyatı tahmini · ageron/handson-ml3",
+  "sahneler": [
+    {
+      "id": "giris",
+      "no": 0,
+      "baslik": "Giriş",
+      "renk": "#94a3b8",
+      "gorsel": "Büyük başlık, soru işaretli ev ikonu, 14.4k ⭐ ve 20.640 mahalle rozetleri.",
+      "cumleler": [
+        "Bir bilgisayar, hiç görmediği bir evin fiyatını nasıl tahmin eder?",
+        "Bu videoda gerçek bir makine öğrenmesi projesini, on dakikada baştan sona kuruyoruz.",
+        "Verimiz 1990 Kaliforniya nüfus sayımı. Kaynak projemiz GitHub'da 14 bin yıldızlı handson-ml3.",
+        "Görevimiz: bir mahallenin bilgilerine bakıp, oradaki ortalama ev fiyatını tahmin etmek.",
+        "Hazırsan başlayalım."
+      ]
+    },
+    {
+      "id": "harita",
+      "no": 1,
+      "baslik": "Büyük Harita",
+      "renk": "#94a3b8",
+      "gorsel": "9 aşamalı proje haritası; aşamalar renk gruplarıyla (veri, hazırlık, modelleme, sonuç) sırayla belirir.",
+      "cumleler": [
+        "Önce haritaya bakalım. Her makine öğrenmesi projesi aşağı yukarı aynı dokuz adımdan geçer.",
+        "Büyük resim, veriyi almak ve keşfetmek: elimizde ne var?",
+        "Test setini ayırmak ve veriyi hazırlamak: makinenin anlayacağı hale getirmek.",
+        "Model eğitmek ve ince ayar yapmak: öğretmek ve iyileştirmek.",
+        "Test etmek ve kullanmak: gerçekten işe yarıyor mu?",
+        "Sürpriz: asıl öğrenme kısmı sadece birkaç satır kod. Zamanın çoğu veriyle uğraşırken geçer."
+      ]
+    },
+    {
+      "id": "xy",
+      "no": 2,
+      "baslik": "X ve y",
+      "renk": "#4c8dff",
+      "gorsel": "Bir veri satırı: mavi X sütunları ve pembe y sütunu; aradaki model kutusu; 'Denetimli' ve 'Regresyon / Sınıflandırma' etiketleri.",
+      "cumleler": [
+        "Makine öğrenmesinin kalbinde iki harf var: X ve y.",
+        "X, modele verdiğimiz bilgiler: konum, gelir, evlerin yaşı, oda sayısı, okyanusa yakınlık.",
+        "y ise tahmin etmek istediğimiz cevap: ev fiyatı.",
+        "Elimizde doğru cevabı bilinen binlerce örnek var. Buna denetimli öğrenme denir.",
+        "Tahmin ettiğimiz şey bir sayı olduğu için, bu bir regresyon problemi.",
+        "Ucuz mu, pahalı mı diye sorsaydık, sınıflandırma problemi olurdu.",
+        "Hap bilgi: model, X'ten y'ye giden tarifi örneklerden kendisi çıkarır."
+      ]
+    },
+    {
+      "id": "kesif",
+      "no": 3,
+      "baslik": "Veriyi Keşfet",
+      "renk": "#4c8dff",
+      "gorsel": "20.640 sayacı; Kaliforniya fiyat haritası; gelir–fiyat grafiği (r = 0,69 ve 500k tavanı); üç uyarı çipi.",
+      "cumleler": [
+        "Verimizde 20.640 mahalle ve on sütun var.",
+        "Haritada her nokta bir mahalle. Renk fiyatı gösteriyor: kıyılar kırmızı, iç bölgeler mavi.",
+        "Demek ki konum çok önemli.",
+        "Gelir ile fiyat arasında güçlü bir ilişki var: korelasyon 0,69.",
+        "Ama dikkat: fiyatlar 500 bin dolarda kesilmiş. Model bunun üstünü hiç görmeyecek.",
+        "Üç sorun daha var: 207 boş hücre, yazıyla dolu bir sütun ve birbirinden çok farklı ölçekler.",
+        "Hap bilgi: modele dokunmadan önce veriye bak. Sorunlar hep oradadır."
+      ]
+    },
+    {
+      "id": "test",
+      "no": 4,
+      "baslik": "Test Setini Kilitle",
+      "renk": "#8b5cf6",
+      "gorsel": "100 noktalık ızgaradan 20 nokta kasaya kayar ve kilitlenir; rastgele ve tabakalı ayırma çubukları (−16,7% → +0,4%).",
+      "cumleler": [
+        "Şimdi projenin en önemli kuralı.",
+        "Sınav sorularını önceden gören öğrenci, ne kadar bildiğini kanıtlayamaz.",
+        "Bu yüzden verinin yüzde yirmisini bir kasaya kilitliyoruz. Adı test seti.",
+        "Model eğitilirken ona asla bakmayacağız. Biz de bakmayacağız.",
+        "Rastgele ayırınca bir sorun çıktı: en düşük gelirli mahalleler test setinde yüzde 17 eksik kaldı.",
+        "Çözüm, seçim anketlerindeki gibi tabakalı örnekleme: her gelir grubundan, gerçek oranında örnek al.",
+        "Hata yüzde 17'den yüzde 0,4'e indi.",
+        "Hap bilgi: test seti kutsaldır. Bir kez ve en sonda kullanılır."
+      ]
+    },
+    {
+      "id": "hazirla",
+      "no": 5,
+      "baslik": "Veriyi Hazırla",
+      "renk": "#8b5cf6",
+      "gorsel": "Yeni sütun formülü kartı; boş hücrelerin 435 ile dolması; one-hot tablosu; ölçekleme çubukları; terzi kartı (fit / transform).",
+      "cumleler": [
+        "Modeller sadece sayı yer, ve o sayıların düzgün olmasını ister.",
+        "Önce yeni sütunlar üretiyoruz. Toplam oda sayısı az şey söyler, kişi başına oda çok şey söyler.",
+        "Boş hücreleri, eğitim verisinin medyanıyla dolduruyoruz.",
+        "Yazıyı sayıya çevirirken tuzağa dikkat: iç bölgeye bir, okyanus kenarına dört dersek, model sahte bir sıralama görür.",
+        "Çözüm one-hot kodlama: her kategori kendi sıfır-bir sütununu alır.",
+        "Son olarak ölçekleme: gelir sıfır ile on beş arasında, oda sayısı kırk bine kadar. Hepsini aynı ölçeğe getiriyoruz.",
+        "Altın kural: ölçüyü sadece eğitim verisinden al. Terzi ölçüyü bir kez alır, sonra her kumaşı aynı kalıpla keser.",
+        "Kodda bunun adı fit ve transform."
+      ]
+    },
+    {
+      "id": "egitim",
+      "no": 6,
+      "baslik": "Model Eğit",
+      "renk": "#ec4899",
+      "gorsel": "Üç model kartı (çizgi, ağaç, orman); RMSE formülü; ezber ve gerçek not çubukları; 5 katlı çapraz doğrulama animasyonu; basit–ezberci yelpazesi.",
+      "cumleler": [
+        "Sıra geldi öğrenmeye. Üç model yarıştırıyoruz.",
+        "Lineer regresyon, veriye en uygun düz çizgiyi çeker.",
+        "Karar ağacı yirmi soru oyunu oynar: gelir beşten büyük mü? Kıyıda mı?",
+        "Random Forest ise yüz ağacın oylamasıdır. Kalabalığın bilgeliği.",
+        "Başarıyı RMSE ile ölçüyoruz: tahminlerimiz tipik olarak kaç dolar sapıyor?",
+        "İlk sonuç şaşırtıcı: karar ağacı eğitim verisinde sıfır hata yaptı!",
+        "Sevinmeyin, bu ezber. Görmediği veride en kötü model o çıktı: 71 bin dolar hata.",
+        "Bunu test setine dokunmadan nasıl gördük? Çapraz doğrulama ile.",
+        "Eğitim verisini beş parçaya böl. Dördüyle eğit, biriyle sına, beş kez tekrarla.",
+        "Kazanan Random Forest: yaklaşık 49.600 dolar hata.",
+        "Hap bilgi: çok basit model öğrenemez, çok karmaşık model ezberler. Doğrusu ortada."
+      ]
+    },
+    {
+      "id": "ayar",
+      "no": 7,
+      "baslik": "İnce Ayar",
+      "renk": "#ec4899",
+      "gorsel": "Hiperparametre düğmeleri; 3×4 ızgara ve 0→60 eğitim sayacı; ısı haritası; ezber farkı grafiği; '+450 $' kartı.",
+      "cumleler": [
+        "Modellerin, bizim ayarladığımız düğmeleri vardır. Bunlara hiperparametre denir.",
+        "Model, eğitim sırasında parametrelerini kendisi öğrenir. Düğmeleri ise biz seçeriz.",
+        "Grid Search bütün kombinasyonları dener: üç çarpı dört, on iki kombinasyon. Her biri beş turda, toplam altmış eğitim.",
+        "Dört işlemci paralel çalıştı. Hepsi bir buçuk dakika sürdü.",
+        "Yaprak büyüklüğünü artırınca ezber azaldı. Ama çok artırınca model fazla basitleşti.",
+        "Dürüst sonuç: ince ayar sadece 450 dolar kazandırdı. Büyük kazançlar genelde daha iyi veriden gelir."
+      ]
+    },
+    {
+      "id": "final",
+      "no": 8,
+      "baslik": "Büyük Sınav",
+      "renk": "#22c55e",
+      "gorsel": "Kasa açılır; 47.510 $ sayacı; eğitim / çapraz doğrulama / test karşılaştırması; fiyat grubuna göre hata çubukları.",
+      "cumleler": [
+        "Ve büyük an: kasayı açıyoruz.",
+        "Model, hiç görmediği 4.128 mahallede sınava giriyor.",
+        "Sonuç: 47.500 dolar hata. Çapraz doğrulamadaki 49 binle neredeyse aynı.",
+        "Bu harika bir haber: model ezberlememiş, gerçekten öğrenmiş.",
+        "Peki nerede yanılıyor? Ucuz mahallelerde 33 bin, pahalı mahallelerde 100 bin dolar civarı hata.",
+        "En büyük hatalar, 500 bin dolar tavanına takılan mahallelerde. Verideki sorun, modele de yansıdı.",
+        "Hap bilgi: tek bir sayıya bakıp geçme. Hatanın nerede olduğunu analiz et."
+      ]
+    },
+    {
+      "id": "kullan",
+      "no": 9,
+      "baslik": "Kaydet ve Kullan",
+      "renk": "#22c55e",
+      "gorsel": "Terminalde tahmin komutu yazılır; 382.409 $ çıktısı; 100 ağacın oyları grafiği; 1990 → 2026 takvimi ve veri kayması uyarısı.",
+      "cumleler": [
+        "Son adım: modeli kaydedip kullanmak.",
+        "Los Angeles'ta, geliri 80 bin dolar, evleri 20 yaşında bir mahalleyi soralım.",
+        "Model 382 bin dolar diyor. Ama yüz ağacın oyları 110 bin ile 500 bin arasına dağılmış, yani model emin değil.",
+        "Çünkü 1990'da 80 bin dolar gelir çok yüksekti. Model böyle mahalleleri az görmüş.",
+        "Bir uyarı daha: bu model 1990 dünyasını biliyor. Dünya değişir, model bunu kendisi fark edemez.",
+        "Bu yüzden canlıdaki modeller izlenir ve yeni veriyle yeniden eğitilir."
+      ]
+    },
+    {
+      "id": "ozet",
+      "no": 10,
+      "baslik": "7 Hap Bilgi",
+      "renk": "#f59e0b",
+      "gorsel": "Yedi numaralı hap kartı sırayla dizilir; kapanışta repo adı ve 'Sıra sende!' çağrısı.",
+      "cumleler": [
+        "Toparlayalım. Yedi hap bilgi.",
+        "Bir: önce veriye bak.",
+        "İki: test setini kilitle, en sonda bir kez aç.",
+        "Üç: eksikleri doldur, yazıyı one-hot yap, ölçekle. Ölçüyü sadece eğitimden al.",
+        "Dört: eğitim notuna güvenme, çapraz doğrulamaya bak.",
+        "Beş: ezber ile basitlik arasındaki dengeyi bul.",
+        "Altı: iyi özellikler, düğme çevirmekten daha çok kazandırır.",
+        "Yedi: model canlıya çıkınca iş bitmez. İzle ve güncelle.",
+        "Bütün kodlar GitHub'da. Şimdi sıra sende: aynı haritayı kendi verinle dene!"
+      ]
+    }
+  ]
+}

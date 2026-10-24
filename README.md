@@ -34,6 +34,13 @@ Kitaptaki **Bölüm 2: Uçtan Uca ML Projesi**'ni sadeleştirip birlikte yeniden
 | Random Forest, ince ayarlı (CV) | 49.140 $ |
 | **Random Forest, TEST SETİ** | **47.510 $** (%95 GA: 45.4k–49.5k) |
 
+## 🎬 10 dakikalık özet video
+
+Projeyi ML'e yeni başlayanlara anlatan 11 sahnelik eğitim videosu ([Remotion](https://www.remotion.dev/) ile üretildi).
+
+- Zaman kodlu senaryo: [docs/08_video_senaryo.md](docs/08_video_senaryo.md)
+- Kaynak kod ve render talimatı: [video/](video/README.md)
+
 ## Klasör yapısı
 
 ```
@@ -45,7 +52,8 @@ ML_hizli_ogren/
 ├── src/                      ← birlikte yazdığımız Python kodları
 ├── modeller/                 ← kaydedilen hazırlayıcı, modeller, sonuclar.json
 ├── loglar/                   ← eğitim logları (canlı izleme)
-└── gorseller/                ← grafikler
+├── gorseller/                ← grafikler
+└── video/                    ← 10 dk özet videonun Remotion kaynağı
 ```
 
 ## İlerleme

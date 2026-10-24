@@ -1,0 +1,20 @@
+{
+  "name": "ml-hizli-ogren-video",
+  "private": true,
+  "description": "Kaliforniya ev fiyatı projesinin 10 dakikalık eğitim videosu (Remotion)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render MLOzet out/ml_ozet.mp4",
+    "senaryo": "node senaryo_md.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}
